@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sites/index'
+
+  get 'sites/about'
+
+  get 'sites/contact'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
