@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'articles/edit'
-
-  get 'articles/index'
-
-  get 'articles/new'
-
-  get 'articles/show'
+  get 'sessions/new'
 
   root to: "sites#index"
 
