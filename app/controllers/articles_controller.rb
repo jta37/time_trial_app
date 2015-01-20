@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
   	redirect_to article_path(@article.id)
   end
 
-  def delete
+  def destroy
   	@article.destroy
   	redirect_to articles_path
   end
