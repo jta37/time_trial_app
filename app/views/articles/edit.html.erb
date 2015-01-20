@@ -1,2 +1,8 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <h1>Edit Post</h1>
+    <div>Did you say something stupid and want to change it...</div>
+  </div>
+</div>
+
+<%= render partial: "articles/form", locals: { article: @article } %>

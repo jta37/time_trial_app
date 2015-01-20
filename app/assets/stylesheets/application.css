@@ -10,6 +10,76 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap-3.2.0.min.css
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #555C5A;
+  color: #95C9B7;
+ }
+
+a {
+  color: #F6A4A5;
+}
+a:hover {
+  color: #C0A0C5;
+}
+
+a:visited {
+    color: white;
+}
+
+.form-group .form-control {
+  padding: 20px;
+  font-size: 17px;
+}
+.btn-cust {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  background-color: #34495e;
+  border:none;
+}
+.btn-cust:focus {
+  border: none;
+  outline: none;
+}
+.btn-cust:hover {
+  background-color: #2980b9;
+}
+.btn-cust:active {
+  background-color: #3498db;
+}
+form {
+  background-color: #5CBD6E;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+.navbar-cust {
+  background-color: #5CBD6E;
+  border-radius:0;
+  border: none;
+  height: 50px;
+}
+
+input.form-control, textarea.form-control {
+  border-radius: 0px;
+  background-color: #F1C9C0;
+}
+
+input.form-control:focus, textarea.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-cust .navbar-brand {
+  color: white;
+  border-radius: 
+}
+.navbar-cust .navbar-brand:hover {
+  color: #F1A9A0;
+}

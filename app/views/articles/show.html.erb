@@ -1,12 +1,1 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
-<div class="row">
-  <div class="article col-xs-8 col-xs-offset-2">
-    <div class="article-title"><h1><%= @article.title.titleize %></h1></div>
-    <div class="article-content">
-      <% @article.content.split("\n").each do |p| %>
-        <p><%= p %></p>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render partial: "articles/article", locals: { article: @article } %>
