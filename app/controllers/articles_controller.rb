@@ -6,11 +6,11 @@ class ArticlesController < ApplicationController
 
   def index
   	@articles = Article.all
-  	# @articles.each do |article|
-  		# if article.content.length > 500
-  			# article.get_keywords
-  		# end
-  	# end
+  	@articles.each do |article|
+  		if article.content.length > 500
+  			article.get_keywords
+  		end
+  	end
   end
 
   def new
