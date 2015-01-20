@@ -1,1 +1,6 @@
-<%= render partial: "articles/article", locals: { article: @article } %>
+<div class="position-delete">
+	<%= render partial: "articles/article", locals: { article: @article } %>
+	<%= link_to "Delete Article", @article, method: :delete, class: "btn btn-delete"%>
+</div>
+
+ 
