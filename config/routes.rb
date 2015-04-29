@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   get '/sign_up', to: "users#new"
   resources :sessions, only: [:create, :destroy]
 
+  delete 'logout' => 'sessions#destroy'
+  
   get '/login', to: "sessions#new", as: "login"
-  get '/logout', to: "sessions#destroy", as: "logout"
+  # get '/logout', to: "sessions#destroy", as: "logout"
 
 end

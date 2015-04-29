@@ -1,6 +1,10 @@
 <div class="position-delete">
 	<%= render partial: "articles/article", locals: { article: @article } %>
-	<%= link_to "Delete Article", @article, method: :delete, class: "btn btn-delete"%>
+	<% if current_user %>
+		<%= link_to "Delete Article", @article, method: :delete, class: "btn btn-delete"%>
+		<% else %>
+		<% flash[:alert] %> <div><%= flash[:alert] %> </div>
+	<% end %>
 </div>
 
  

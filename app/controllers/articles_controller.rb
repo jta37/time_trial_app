@@ -1,8 +1,9 @@
 class ArticlesController < ApplicationController
+  # using :logged_in? method from SessionsHelper
+  before_filter :logged_in?
 	# before_filter makes sure the user can only destroy,update,edit 
 	before_filter :find_user_article, only: [:destroy, :update, :edit]
-	# using :logged_in? method from SessionsHelper
-	before_filter :logged_in?
+  before_action :set_user, only: [:destroy, :update, :edit]
 
   def index
   	@articles = Article.all
@@ -27,11 +28,14 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    # find_article method => @article = Article.find_by({id: params[:id]}) 
   	find_article
+    flash[:alert] = "You Can't Delete Another User's Post!"
   end
 
   def edit
   	# before_filter references the private method find_user_article
+    find_user_article
   end
 
   def update

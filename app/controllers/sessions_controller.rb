@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # user = User.confirm(*login_params)
+    
   	user_params = params.require(:user)
   	user = User.confirm(user_params[:email], user_params[:password])
   	if user
@@ -16,7 +18,14 @@ class SessionsController < ApplicationController
 
   def destroy
   	logout()
-  	redirect_to "/"
+  	redirect_to "/login"
   end
+
+  # private
+
+  #   def login_params
+  #     user = params.require(:user)
+  #     [user[:email], user[:password]]
+  #   end
 
 end
